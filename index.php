@@ -30,4 +30,32 @@ class Cibo extends Prodotti{
     }
 }
 
+class Giochi extends Prodotti{
+    public $descrizione;
+
+    public function __construct(
+        float $_prezzo,
+        bool $_cani,
+        bool $_gatti,
+        string $_descrizione,
+    ){
+      parent::__construct($_prezzo, $_cani, $_gatti);  
+      $this->descrizione = $_descrizione;
+    }
+}
+
+class Cucce extends Prodotti{
+    public $grandezza;
+
+    public function __construct(
+        float $_prezzo,
+        bool $_cani,
+        bool $_gatti,
+        string $_grandezza,
+    ){
+      parent::__construct($_prezzo, $_cani, $_gatti);  
+      $this->grandezza = $_grandezza;
+    }
+}
+
 ?>
