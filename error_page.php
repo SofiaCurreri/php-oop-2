@@ -1,8 +1,3 @@
-<?php 
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP OOP Extends</title>
+    <title>Error Page</title>
 
     <!-- CDN Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,7 +14,11 @@
 
 <body>
 
-    <h1>Prodotti</h1>
+    <div class="container">
+        <div class="alert alert-danger my-5" role="alert">
+            <?= $error_message ?>
+        </div>
+    </div>
 
 </body>
 

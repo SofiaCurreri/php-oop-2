@@ -1,18 +1,24 @@
 <?php 
 
 class Categoria {
-    public $nome;
+    protected $nome;
     private static $categorie_accettate = [
         "Cane",
         "Gatto"
     ];
 
     public function __construct($_nome) {
-        $this->setNome($_nome);
+        try{
+            if(!$this->setNome($_nome)) throw new Exception("Invalid argument 'nome' for 'Categoria' class. It must be a string and within the categorie_accettate array");
+        } catch (Exception $e) {
+            $error_message = $e->getMessage();
+            include __DIR__ . "/../error_page.php";
+            exit;
+        }        
     }
 
     public function setNome($nome) {
-        if(!is_string($nome) || $nome === "") return false;
+        if(!is_string($nome) || $nome === "" || !in_array($nome, self::$categorie_accettate)) return false;
         $this->nome = $nome;
 
         return $this;
