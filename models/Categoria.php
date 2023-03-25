@@ -7,9 +7,9 @@ class Categoria {
         "Gatto"
     ];
 
-    public function __construct($_nome) {
+    public function __construct($nome) {
         try{
-            if(!$this->setNome($_nome)) throw new Exception("Invalid argument 'nome' for 'Categoria' class. It must be a string and within the categorie_accettate array");
+            if(!$this->setNome($nome)) throw new Exception("Invalid argument 'nome' for 'Categoria' class. It must be a string and within the categorie_accettate array");
         } catch (Exception $e) {
             $error_message = $e->getMessage();
             include __DIR__ . "/../error_page.php";

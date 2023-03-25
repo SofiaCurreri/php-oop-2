@@ -8,13 +8,13 @@ class Prodotto{
     protected $categoria;
 
     public function __construct(
-        string $_nome,
-        float $_prezzo,
-        Categoria $_categoria, //$categoria è un' istanza della classe Categoria
+        string $nome,
+        float $prezzo,
+        Categoria $categoria, //$categoria è un' istanza della classe Categoria
     ) {
-        $this->nome = $_nome;
-        $this->prezzo = $_prezzo;
-        $this->categoria = $_categoria;
+        $this->setNome($nome);
+        $this->setPrezzo($prezzo);
+        $this->setCategoria($categoria);
     }
 
     public function setNome($nome) {
@@ -50,8 +50,5 @@ class Prodotto{
         return $this->$categoria;
     }
 }
-
-$prodotto = new Prodotto("Palla", 3.50, new Categoria("99246656"));
-var_dump($prodotto);
 
 ?>
