@@ -11,10 +11,15 @@ class Prodotto{
         string $nome,
         float $prezzo,
         Categoria $categoria, //$categoria è un' istanza della classe Categoria
-    ) {
-        $this->setNome($nome);
-        $this->setPrezzo($prezzo);
-        $this->setCategoria($categoria);
+    ) 
+    {
+        try {
+            if(!$this->setNome($nome)) throw new Exception("Argomento non valido per l' attributo 'nome' nella classe Prodotto");
+            if(!$this->setPrezzo($prezzo)) throw new Exception("Argomento non valido per l' attributo 'prezzo' nella classe Prodotto");
+            if(!$this->setCategoria($categoria)) throw new Exception("Argomento non valido per l' attributo 'categoria' nella classe Prodotto");
+        } catch (Exception $e) {
+
+        }
     }
 
     public function setNome($nome) {
