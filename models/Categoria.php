@@ -2,12 +2,14 @@
 
 class Categoria {
     protected $nome;
+    public $icona;
     private static $categorie_accettate = [
         "Cane",
         "Gatto"
     ];
 
-    public function __construct($nome) {
+    public function __construct($nome, $icona) {
+        $this->icona = $icona;
         try{
             if(!$this->setNome($nome)) throw new Exception("Invalid argument 'nome' for 'Categoria' class. It must be a string and within the categorie_accettate array");
         } catch (Exception $e) {

@@ -18,7 +18,9 @@ class Prodotto{
             if(!$this->setPrezzo($prezzo)) throw new Exception("Argomento non valido per l' attributo 'prezzo' nella classe Prodotto");
             if(!$this->setCategoria($categoria)) throw new Exception("Argomento non valido per l' attributo 'categoria' nella classe Prodotto");
         } catch (Exception $e) {
-
+            $error_message = $e->getMessage();
+            include __DIR__ . "/../error_page.php";
+            exit;
         }
     }
 
