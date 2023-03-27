@@ -17,6 +17,5 @@ $prodotti = [
     new ProdottoGioco("Sonaglio", 1.20, new Categoria("Gatto", "fa-solid fa-cat"), "Plastica"),
 ];
 
-var_dump($prodotti);
 
 ?>
