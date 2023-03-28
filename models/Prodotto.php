@@ -31,8 +31,8 @@ class Prodotto{
         return $this; //ritorna tutto l' oggetto
     }
 
-    public function getNome($nome) {
-        return $this->$nome;
+    public function getNome() {
+        return $this->nome;
     }
 
     public function setPrezzo($prezzo) {
@@ -42,8 +42,8 @@ class Prodotto{
         return $this; //ritorna tutto l' oggetto
     }
 
-    public function getPrezzo($prezzo) {
-        return $this->$prezzo;
+    public function getPrezzo() {
+        return $this->prezzo;
     }
 
     public function setCategoria($categoria) {
@@ -53,8 +53,8 @@ class Prodotto{
         return $this; //ritorna tutto l' oggetto
     }
 
-    public function getCategoria($categoria) {
-        return $this->$categoria;
+    public function getCategoria() {
+        return $this->categoria;
     }
 }
 

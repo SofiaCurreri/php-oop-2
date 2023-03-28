@@ -26,8 +26,8 @@ class Categoria {
         return $this;
     }
 
-    public function getNome($nome) {
-        return $this->$nome;
+    public function getNome() {
+        return $this->nome;
     }
 }
 
