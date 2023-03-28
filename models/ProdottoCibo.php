@@ -21,5 +21,9 @@ class ProdottoCibo extends Prodotto {
         $this->peso = $peso;
         $this->tipologia = $tipologia;
     }
+
+    public function getNomeClasse() {
+        return "Cibo";
+    }
 }
 ?>

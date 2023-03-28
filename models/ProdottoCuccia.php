@@ -21,5 +21,9 @@ class ProdottoCuccia extends Prodotto {
         $this->peso = $peso;
         $this->materiale = $materiale;
     }
+
+    public function getNomeClasse() {
+        return "Cuccia";
+    }
 }
 ?>

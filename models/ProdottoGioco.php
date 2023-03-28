@@ -15,5 +15,9 @@ class ProdottoGioco extends Prodotto {
         parent::__construct($nome, $prezzo, $categoria);
         $this->materiale = $materiale;
     }
+
+    public function getNomeClasse() {
+        return "Gioco";
+    }
 }
 ?>
