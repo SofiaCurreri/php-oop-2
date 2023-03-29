@@ -31,7 +31,7 @@ include __DIR__ . "/Data/prodotti.php";
         <div class="row row-cols-4 g-5">
             <?php foreach($prodotti_cane as $prodotto) : ?>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card h-100" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">
                             <i class="<?= $prodotto->getCategoria()->icona ?>"></i>
@@ -43,7 +43,7 @@ include __DIR__ . "/Data/prodotti.php";
                         </h5>
                         <h6 class="card-subtitle mb-2 text-muted">
                             <?php if($prodotto instanceof ProdottoCuccia || $prodotto instanceof ProdottoCibo) : ?>
-                            <?= $prodotto->peso_unita_di_misura ?> <?= $prodotto->peso ?>
+                            <?= $prodotto->getPesoCompleto() ?>
                             <?php endif; ?>
 
                             <?php if($prodotto instanceof ProdottoCuccia || $prodotto instanceof ProdottoGioco) : ?>
@@ -69,7 +69,7 @@ include __DIR__ . "/Data/prodotti.php";
         <div class="row row-cols-4 g-5">
             <?php foreach($prodotti_gatto as $prodotto) : ?>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card h-100" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">
                             <i class="<?= $prodotto->getCategoria()->icona ?>"></i>
@@ -79,7 +79,7 @@ include __DIR__ . "/Data/prodotti.php";
                         </h5>
                         <h6 class="card-subtitle mb-2 text-muted">
                             <?php if($prodotto instanceof ProdottoCuccia || $prodotto instanceof ProdottoCibo) : ?>
-                            <?= $prodotto->peso_unita_di_misura ?> <?= $prodotto->peso ?>
+                            <?= $prodotto->getPesoCompleto()?>
                             <?php endif; ?>
 
                             <?php if($prodotto instanceof ProdottoCuccia || $prodotto instanceof ProdottoGioco) : ?>

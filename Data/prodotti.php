@@ -13,8 +13,8 @@ $prodotti = [
     new ProdottoCuccia("Cuccia Bellissima", 49.99, $categoria_cane, "KG", 5, "Cotone"),
     new ProdottoCuccia("Cuccia Morbida", 23.99, $categoria_gatto, "KG", 2, "Cotone"),
     
-    new ProdottoCibo("Croccantini SuperDog", 13.50, $categoria_cane, "KG", 8, "Secco"),
-    new ProdottoCibo("Scatolette TunaGold", 7.50, $categoria_gatto, "G", 500, "Umido"),
+    new ProdottoCibo("Croccantini Super", 13.50, $categoria_cane, "KG", 8, "Secco"),
+    new ProdottoCibo("Scatolette Gold", 7.50, $categoria_gatto, "G", 500, "Umido"),
     
     new ProdottoGioco("Gommosso", 3.50, $categoria_cane, "Plastica"),
     new ProdottoGioco("Sonaglio", 1.20, $categoria_gatto, "Plastica"),

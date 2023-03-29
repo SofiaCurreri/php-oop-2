@@ -1,10 +1,10 @@
 <?php 
 
 require_once __DIR__ . "/Prodotto.php";
+require_once __DIR__ . "/traits/Pesabile.php";
 
 class ProdottoCuccia extends Prodotto {
-    public $peso_unita_di_misura;
-    public $peso;
+    use Pesabile;
     public $materiale;
 
     public function __construct(
